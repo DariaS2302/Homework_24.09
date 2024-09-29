@@ -8,56 +8,56 @@ public class RandomUtils {
     Faker faker = new Faker();
 
 
-    public String FirstName() {
+    public String firstName() {
         return faker.name().firstName();
     }
 
-    public String LastName() {
+    public String lastName() {
         return faker.name().lastName();
     }
 
-    public String UserEmail() {
+    public String userEmail() {
         return faker.internet().emailAddress();
     }
 
-    public String Gender() {
+    public String gender() {
         return faker.options().option("Male", "Female", "Other");
     }
 
-    public String UserNumber() {
+    public String userNumber() {
         return faker.phoneNumber().subscriberNumber(10);
     }
 
-    public String DayOfBirth() {
+    public String dayOfBirth() {
         return String.format("%02d", faker.number().numberBetween(1, 28));
     }
 
-    public String MonthOfBirth() {
+    public String monthOfBirth() {
         return faker.options().option("January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December");
     }
 
-    public String YearOfBirth() {
+    public String yearOfBirth() {
         return String.valueOf(faker.number().numberBetween(1900, LocalDate.now().getYear()));
     }
 
-    public String Subjects() {
+    public String subjects() {
         return faker.options().option("History", "Arts", "Maths", "Social Studies");
     }
 
-    public String Hobbies() {
+    public String hobbies() {
         return faker.options().option("Sports", "Reading", "Music");
     }
 
-    public String Address() {
+    public String address() {
         return faker.address().streetAddress();
     }
 
-    public String State() {
+    public String state() {
         return faker.options().option("NCR", "Haryana", "Uttar Pradesh", "Rajasthan");
     }
 
-    public String City(String state) {
+    public String city(String state) {
         return switch (state) {
             case "NCR" -> faker.options().option("Delhi", "Gurgaon", "Noida");
             case "Uttar Pradesh" -> faker.options().option("Lucknow", "Merrut", "Agra");

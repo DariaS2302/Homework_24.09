@@ -10,20 +10,20 @@ public class DemoqaFormTestFaker extends TestBase {
     private final DemoqaFormPage demoqaFormPage = new DemoqaFormPage();
     private final RandomUtils randomData = new RandomUtils();
 
-    String firstName = randomData.FirstName(),
-            lastName = randomData.LastName(),
-            userEmail = randomData.UserEmail(),
-            gender = randomData.Gender(),
-            userNumber = randomData.UserNumber(),
-            dayOfBirth = randomData.DayOfBirth(),
-            monthOfBirth = randomData.MonthOfBirth(),
-            yearOfBirth = randomData.YearOfBirth(),
-            subjects = randomData.Subjects(),
-            hobbies = randomData.Hobbies(),
+    String firstName = randomData.firstName(),
+            lastName = randomData.lastName(),
+            userEmail = randomData.userEmail(),
+            gender = randomData.gender(),
+            userNumber = randomData.userNumber(),
+            dayOfBirth = randomData.dayOfBirth(),
+            monthOfBirth = randomData.monthOfBirth(),
+            yearOfBirth = randomData.yearOfBirth(),
+            subjects = randomData.subjects(),
+            hobbies = randomData.hobbies(),
             pictureName = "tst.jpg",
-            address = randomData.Address(),
-            state = randomData.State(),
-            city = randomData.City(state);
+            address = randomData.address(),
+            state = randomData.state(),
+            city = randomData.city(state);
 
 
     @Test
